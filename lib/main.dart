@@ -2,6 +2,9 @@ import "dart:async";
 // following needed for future group
 import "package:async/async.dart";
 import "package:flutter/material.dart";
+import 'package:google_books_2/geolocation.dart';
+import 'package:google_books_2/navigation_dialog.dart';
+import 'package:google_books_2/navigation_first.dart';
 // this has to be here in any case
 import 'package:http/http.dart';
 /* this part if we need to use it named */
@@ -16,13 +19,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Future Demo",
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: FuturePage(),
-    );
+        title: "Future Demo",
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        // home: FuturePage(),
+        // home: LocationScreen());
+        // home: NavigationFirst());
+        home: NavigationDialog());
   }
 }
 
